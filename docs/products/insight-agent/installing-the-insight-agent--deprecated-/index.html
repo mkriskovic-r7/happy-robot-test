@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.33" />
-<title>_Index :: Happy Robot</title>
+<title>Installing the Insight Agent (deprecated) :: Happy Robot</title>
 <link rel="shortcut icon" href="/happy-robot-test/images/favicon.png" type="image/x-icon" />
 <link href="/happy-robot-test/css/font-awesome.min.css" rel="stylesheet">
 <link href="/happy-robot-test/css/nucleus.css" rel="stylesheet">
@@ -22,7 +22,7 @@
 
     
   </head>
-  <body data-url="/happy-robot-test/support/">
+  <body data-url="/happy-robot-test/products/insight-agent/installing-the-insight-agent--deprecated-/">
     
       <header>
   <div class="logo">
@@ -43,7 +43,7 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="/happy-robot-test/support/" class="dd-item parent active
+    <li data-nav-id="/happy-robot-test/support/" class="dd-item
         ">
       <div>
       <a href="/happy-robot-test/support/">_Index</a>
@@ -55,10 +55,11 @@
       <a href="/happy-robot-test/community/">_Index</a>
       </div>
     </li>
-    <li data-nav-id="/happy-robot-test/products/" class="dd-item haschildren
+    <li data-nav-id="/happy-robot-test/products/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/happy-robot-test/products/">Products</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/happy-robot-test/products/">Products</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/happy-robot-test/products/appspider/landing/" class="dd-item">
@@ -117,7 +118,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/happy-robot-test/products/insight-agent/installing-the-insight-agent--deprecated-/" class="dd-item">
+      <li data-nav-id="/happy-robot-test/products/insight-agent/installing-the-insight-agent--deprecated-/" class="dd-item active">
         <div>
           <a href="/happy-robot-test/products/insight-agent/installing-the-insight-agent--deprecated-/">
             Installing the Insight Agent (deprecated)
@@ -189,13 +190,29 @@
       <center>Navigation : 
         <select onchange="javascript:location.href = this.value;">
           
-    <option value="/happy-robot-test/support/"  selected>
-   _Index</option> 
-  
+    <option value="/happy-robot-test/support/" >
+   _Index</option>
     <option value="/happy-robot-test/community/" >
    _Index</option>
     <option value="/happy-robot-test/products/" >
-   Products</option>
+   Products</option> 
+      <option value="/happy-robot-test/products/appspider/landing/" >- Landing</option>
+      <option value="/happy-robot-test/products/nexpose/landing/" >- Landing</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/deploying-insight-agent-to-azure/" >- Deploying Insight Agent to Azure</option>
+      <option value="/happy-robot-test/products/insight-agent/frequently-asked-questions/" >- Frequently Asked Questions</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-using-gpos/" >- Installing the Agent Using GPOs</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-using-patch-management-software/" >- Installing the Agent Using Patch Management Software</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-for-mcafee-epo-users/" >- Installing the Agent for McAfee ePO Users</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/" >- Installing the Insight Agent</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent--deprecated-/"  selected>- Installing the Insight Agent (deprecated)</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent-in-silent-mode/" >- Installing the Insight Agent in Silent Mode</option>
+      <option value="/happy-robot-test/products/insight-agent/system-requirements/" >- System Requirements</option>
+      <option value="/happy-robot-test/products/insight-agent/the-insight-agent/" >- The Insight Agent</option>
+      <option value="/happy-robot-test/products/insight-agent/the-insight-agent-communication-with-the-insight-platform/" >- The Insight Agent Communication with the Insight Platform</option>
+      <option value="/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightidr/" >- Using the Agent with InsightIDR</option>
+      <option value="/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightops/" >- Using the Agent with InsightOps</option>
+      <option value="/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightvm/" >- Using the Agent with InsightVM</option>
+  
 
 
 
@@ -218,41 +235,79 @@
       </div>
     
 
-    <h1>_Index</h1>
+    <h1>Installing the Insight Agent (deprecated)</h1>
     
     
     
+    <p>To begin the installation process, download the Insight Agent and install it on the endpoint. Just remember that you can only install one Insight Agent per machine.
+[block:callout]
+{
+  &ldquo;type&rdquo;: &ldquo;info&rdquo;,
+  &ldquo;body&rdquo;: &ldquo;If you are an existing Insight product customer and already deployed an Insight Agent across your environment, there is nothing else you need to do. The Insight Agent works across all Insight products.&rdquo;
+}
+[/block]
+1. From the <em>Agent Management</em> page, click the <strong>Download agent</strong> button.
+2. From the <em>Download Agent</em> page, download the Insight Agent for the appropriate platform. The Insight Agent is packaged in a ZIP file. The necessary license keys and certificates are provided in the downloaded file.
+3. Copy the ZIP file to the target system and unzip it. You will find the installer (MSI for Windows, PKG for Mac, a script named <em>agent_control</em> for Linux), as well as four security files: client.key, client.crt, config.json, and cafile.pem. Make sure that all supporting files are unzipped to the same folder as the installer.
+4. Install the Insight Agent by executing the relevant installer. For the Linux agent, installation commands can be found in the README file packaged with the installer. The Insight Agent is installed as a service, and the security files are automatically installed. The default installation details are:
+   * Windows
+      * Install location - c:\Program Files\Rapid7\Insight Agent
+      * Service name - Rapid7 Insight Agent
+   * Mac
+      * Install location - /opt/rapid7/ir_agent
+      * Service name - com.rapid7.ir_agent
+   * Linux
+      * Install location - /opt/rapid7/ir_agent
+      * Service name - ir_agent</p>
 
+<p>After you install the Insight Agent, it runs automatically. To verify that the agent is running, try the following commands:
+* <strong>Windows</strong> - Look in the Task Manager and ensure that &ldquo;Rapid7&rsquo;s Insight Agent&rdquo; is running.
+* <strong>Mac</strong> - In the terminal, run the following command: <code>ps aux | grep ir_agent</code>
+[block:callout]
+{
+  &ldquo;type&rdquo;: &ldquo;info&rdquo;,
+  &ldquo;body&rdquo;: &ldquo;Multiple “ir_agent” processes will appear in the process list. This means the Insight Agent is running different tasks, it is not an indicator of multiple agents.&rdquo;
+}
+[/block]
+* <strong>Linux</strong> - In the terminal, run the following command: <code>ps aux | grep ir_agent</code>
+[block:callout]
+{
+  &ldquo;type&rdquo;: &ldquo;info&rdquo;,
+  &ldquo;body&rdquo;: &ldquo;Multiple “ir_agent” processes will appear in the process list. This means the Insight Agent is running different tasks, it is not an indicator of multiple agents.&rdquo;
+}
+[/block]
+For more information on installation processes using Software Deployment Tools, see <a href="doc:installing-the-insight-agent-using-patch-management-software">Installing the Insight Agent Using Patch Management Software</a>, <a href="doc:installing-the-insight-agent-using-gpos">Installing the Insight Agent Using GPOs</a>, and <a href="doc:installing-the-insight-agent-for-mcafee-epo-users">Installing the Insight Agent for McAfee ePO Users</a>.
+[block:callout]
+{
+  &ldquo;type&rdquo;: &ldquo;info&rdquo;,
+  &ldquo;body&rdquo;: &ldquo;The Insight Agent will attempt to automatically update via Collector connections, or via other Insight Agents before downloading the update from the Insight platform. Updates do not require a system restart for the new update to take effect.&rdquo;
+}
+[/block]
+###Performing a Silent Installation
+[block:callout]
+{
+  &ldquo;type&rdquo;: &ldquo;warning&rdquo;,
+  &ldquo;body&rdquo;: &ldquo;To perform a silent installation, administrator privileges are required.&rdquo;
+}
+[/block]
+Based on your Operating System, run the appropriate command:
+<strong>Windows:</strong> Run the following for 32-bit Windows:
+<code>msiexec /i agentInstaller-x86.msi /quiet /qn</code>
+Run the following for 64-bit Windows:
+<code>msiexec /i agentInstaller-x64.msi /quiet /qn</code></p>
 
+<p><strong>Mac:</strong> Run the following in the folder of the Agent that you downloaded:
+<code>sudo installer -pkg endpoint_agent.pkg -target /</code></p>
 
-<div class="extra-pagination inner">
-<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 0</span>
-	
-</nav>
-
-</div>
-
-
-
-<div style="margin-bottom:2rem"></div>
-
-<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 0</span>
-	
-</nav>
-
-
+<p><strong>Linux:</strong> The installation for Linux agents are always silent installs.</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/happy-robot-test/" title="Happy Robot"> <i class="fa fa-chevron-left"></i><label>Happy Robot</label></a>
-    <a class="nav nav-next" href="/happy-robot-test/community/" title="_Index" style="margin-right: 0px;"><label>_Index</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/happy-robot-test/products/insight-agent/installing-the-insight-agent/" title="Installing the Insight Agent"> <i class="fa fa-chevron-left"></i><label>Installing the Insight Agent</label></a>
+    <a class="nav nav-next" href="/happy-robot-test/products/insight-agent/installing-the-insight-agent-in-silent-mode/" title="Installing the Insight Agent in Silent Mode" style="margin-right: 0px;"><label>Installing the Insight Agent in Silent Mode</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -266,13 +321,9 @@
     
 
   
-    <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 19/01/2018
-    </div>
-    
 
     <div class="github-link">
-      <a href="support/_index.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="products/insight-agent/Installing%20the%20Insight%20Agent%20-deprecated-.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

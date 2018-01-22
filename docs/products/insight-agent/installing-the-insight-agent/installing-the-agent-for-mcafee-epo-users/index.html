@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.33" />
-<title>Landing :: Happy Robot</title>
+<title>Installing the Agent for McAfee ePO Users :: Happy Robot</title>
 <link rel="shortcut icon" href="/happy-robot-test/images/favicon.png" type="image/x-icon" />
 <link href="/happy-robot-test/css/font-awesome.min.css" rel="stylesheet">
 <link href="/happy-robot-test/css/nucleus.css" rel="stylesheet">
@@ -22,7 +22,7 @@
 
     
   </head>
-  <body data-url="/happy-robot-test/products/appspider/landing/">
+  <body data-url="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-for-mcafee-epo-users/">
     
       <header>
   <div class="logo">
@@ -62,7 +62,7 @@
             <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/happy-robot-test/products/appspider/landing/" class="dd-item active">
+      <li data-nav-id="/happy-robot-test/products/appspider/landing/" class="dd-item">
         <div>
           <a href="/happy-robot-test/products/appspider/landing/">
             Landing
@@ -104,7 +104,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-for-mcafee-epo-users/" class="dd-item">
+      <li data-nav-id="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-for-mcafee-epo-users/" class="dd-item active">
         <div>
           <a href="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-for-mcafee-epo-users/">
             Installing the Agent for McAfee ePO Users
@@ -196,13 +196,13 @@
    _Index</option>
     <option value="/happy-robot-test/products/" >
    Products</option> 
-      <option value="/happy-robot-test/products/appspider/landing/"  selected>- Landing</option>
+      <option value="/happy-robot-test/products/appspider/landing/" >- Landing</option>
       <option value="/happy-robot-test/products/nexpose/landing/" >- Landing</option>
       <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/deploying-insight-agent-to-azure/" >- Deploying Insight Agent to Azure</option>
       <option value="/happy-robot-test/products/insight-agent/frequently-asked-questions/" >- Frequently Asked Questions</option>
       <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-using-gpos/" >- Installing the Agent Using GPOs</option>
       <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-using-patch-management-software/" >- Installing the Agent Using Patch Management Software</option>
-      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-for-mcafee-epo-users/" >- Installing the Agent for McAfee ePO Users</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-for-mcafee-epo-users/"  selected>- Installing the Agent for McAfee ePO Users</option>
       <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/" >- Installing the Insight Agent</option>
       <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent--deprecated-/" >- Installing the Insight Agent (deprecated)</option>
       <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent-in-silent-mode/" >- Installing the Insight Agent in Silent Mode</option>
@@ -235,19 +235,101 @@
       </div>
     
 
-    <h1>Landing</h1>
+    <h1>Installing the Agent for McAfee ePO Users</h1>
     
     
     
-    <p>Stuff here too</p>
+    
+
+<p>Installing the Insight Agent allows McAfee ePO users to deploy and manage the Insight Agent via McAfee ePO software management.</p>
+
+<p>This process assumes that the McAfee ePolicy Orchestrator is already configured to monitor the Windows systems in your environment, and these target systems have the McAfee Agent installed.</p>
+
+<p>To begin, download the following:
+* the Rapid7 ePO extension (<a href="http://download2.rapid7.com/download/NeXpose-v4/epo-extension/Rapid7Nexpose.zip">http://download2.rapid7.com/download/NeXpose-v4/epo-extension/Rapid7Nexpose.zip</a>)
+* the Rapid7 Manager plugin (<a href="http://download2.rapid7.com/download/NeXpose-v4/epo-extension/R7AgentDeployment_0409.zip">http://download2.rapid7.com/download/NeXpose-v4/epo-extension/R7AgentDeployment_0409.zip</a>)
+* the InsightAgent installer from the “Download agent” page in your application. These installer files should be accessible from the ePO server.</p>
+
+<p>Next, install the Rapid7 Extension on the ePO Server, Install the Rapid7 Manager Plugin on Target Systems, and then Install the Insight Agent.</p>
+
+<h3 id="installing-the-rapid7-extension-on-the-epo-server">Installing the Rapid7 Extension on the ePO Server</h3>
+
+<p>You can install the Rapid7 ePO extension by obtaining the installation zip archive from the Rapid7 support. The extension can be installed on ePO using the following steps:
+1. From the main menu of ePO, under the <em>Software</em> category, click on <strong>Extensions</strong>.
+2. The <em>Extensions</em> screen appears. Click on the <strong>Install Extension</strong> button, and then browse to Rapid7.zip file location. Follow all the steps of the installation process.
+3. After the installation is complete, you are returned to the Extensions screen. Ensure that Rapid7 is visible in the list of extensions and the state is <em>Running</em>.</p>
+
+<h3 id="installing-the-rapid7-manager-plugin-on-target-systems">Installing the Rapid7 Manager Plugin on Target Systems</h3>
+
+<p>The Rapid7 Manager coordinates communication between the Rapid7 extension and the Insight Agents on the target systems. It is also responsible for enforcing the policies related to Rapid7 on the target systems. The following steps are required for installing the Rapid7 Manager on your systems.</p>
+
+<ol>
+<li>From the main menu, under the <em>Software</em> category, click on <strong>Master Repository</strong>.</li>
+<li>On the Master Repository screen, click the <strong>Check In Package</strong> button, and browse to the R7AgentDeployment zip file.</li>
+<li>Ensure that the application <em>Rapid7 Manager</em> appears in the package list in the Master Repository screen.</li>
+<li>From the main menu, under the <em>Policy</em> category, select <strong>Client Task Catalog</strong>.</li>
+<li>On the Client Task Catalog screen, select <strong>Product Deployment</strong> as the task type, and then click the <strong>New Task</strong> button.</li>
+<li>In the client task creation wizard, set the product as <strong>Rapid7 Manager</strong> and the action as <strong>Install</strong>. Complete the rest of the fields in the installation wizard based on your preferences.</li>
+<li>Now that the installation task is created, you can apply it to the systems in your network. For this, you will have to return to the main menu. Under the <em>Systems</em> category, select <strong>System Tree</strong>.</li>
+<li>On the System Tree screen, select a system group and open the <em>Assigned Client Tasks</em> tab. From the <em>Actions</em> menu at the bottom of this tab, select <strong>New Client Task Assignment</strong>.</li>
+<li>In the New Client Task Assignment wizard, select the <strong>Install Rapid7 Manager</strong> task created in the previous step. Based on your selections, the final screen of the wizard looks something like this:
+[block:image]
+{
+&ldquo;images&rdquo;: [
+{
+  &ldquo;image&rdquo;: [
+    &ldquo;<a href="https://files.readme.io/99dab86-Insight_Agent_installation_6.png&quot;">https://files.readme.io/99dab86-Insight_Agent_installation_6.png&quot;</a>,
+    &ldquo;Insight Agent installation_6.png&rdquo;,
+    1440,
+    860,
+    &ldquo;#5db5d3&rdquo;
+  ]
+}
+]
+}
+[/block]
+When this Client Task is assigned to your systems, the Rapid7 Manager is installed the next time ePO syncs up with those systems. By default, this sync-up process occurs once every hour.</li>
+</ol>
+
+<h3 id="installing-the-insight-agent">Installing the Insight Agent</h3>
+
+<p>The Rapid7 Manager is responsible for installing the Insight Agent on your systems. The following steps will help you configure the Agent installation.</p>
+
+<ol>
+<li>From the main menu, click <strong>Server Settings</strong> under the <em>Configuration</em> category.</li>
+<li>In the Server Settings screen, select Rapid7 Settings. The right pane will have four text fields for agent-related configuration data - <strong>client.crt</strong>, <strong>config.json</strong>, <strong>client.key</strong> and <strong>cafile.pem</strong>. Complete these fields using the contents of similarly named files in the Insight Agent installation package. The contents of these files can be viewed by opening them in Notepad.</li>
+<li>Return to the main menu and under the <em>Policy</em> category, click on <strong>Policy Catalog</strong>. The Policy Catalog page will look like this:
+[block:image]
+{
+&ldquo;images&rdquo;: [
+{
+  &ldquo;image&rdquo;: [
+    &ldquo;<a href="https://files.readme.io/a0fa60c-Insight_Agent_installation_8.png&quot;">https://files.readme.io/a0fa60c-Insight_Agent_installation_8.png&quot;</a>,
+    &ldquo;Insight Agent installation_8.png&rdquo;,
+    1440,
+    381,
+    &ldquo;#5aaac9&rdquo;
+  ]
+}
+]
+}
+[/block]</li>
+<li>On the Policy Catalog page, either duplicate the inbuilt <em>Default</em> (in the case of this screenshot, the Default policy is <em>nexpose_Default</em>) policy, or click <strong>New Policy</strong>.</li>
+<li>On the policy configuration page, select the recommended option - <strong>Don’t reinstall the Rapid7 Insight Agent if already present</strong>. Give this policy a suitable name like ‘install Rapid7 Insight Agent’.</li>
+<li>Visit the System Tree screen through the main menu. On the System Tree screen, select a system group and open the <em>Assigned Policies</em> tab. From the <em>Actions</em> menu at the bottom of this tab, select <strong>New Policy Assignment</strong>.</li>
+<li>In the Policy Assignment wizard, select <strong>install Rapid7 Insight Agent</strong> as the policy to assign.</li>
+</ol>
+
+<p>When the Rapid7 Manager on your target system syncs up with the ePO server, it is notified about the new policy assigned to the system. It then downloads the configuration files from the ePO server and the Insight Agent hosted on the Rapid7 cloud platform.
+You can confirm the installation of the Insight Agent on your target systems by visiting the path <em>Program Files &gt; R7Agent</em>.</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/happy-robot-test/products/" title="Products"> <i class="fa fa-chevron-left"></i><label>Products</label></a>
-    <a class="nav nav-next" href="/happy-robot-test/products/nexpose/landing/" title="Landing" style="margin-right: 0px;"><label>Landing</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-for-mcafee-epo-users/" title="Installing the Agent for McAfee ePO Users"> <i class="fa fa-chevron-left"></i><label>Installing the Agent for McAfee ePO Users</label></a>
+    <a class="nav nav-next" href="/happy-robot-test/products/insight-agent/installing-the-insight-agent--deprecated-/" title="Installing the Insight Agent (deprecated)" style="margin-right: 0px;"><label>Installing the Insight Agent (deprecated)</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -261,13 +343,9 @@
     
 
   
-    <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 19/01/2018
-    </div>
-    
 
     <div class="github-link">
-      <a href="products/appspider/landing.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="products/insight-agent/Installing%20the%20Insight%20Agent/Installing%20the%20Agent%20for%20McAfee%20ePO%20Users.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

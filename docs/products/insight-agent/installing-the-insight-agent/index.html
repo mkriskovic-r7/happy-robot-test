@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.33" />
-<title>Landing :: Happy Robot</title>
+<title>Installing the Insight Agent :: Happy Robot</title>
 <link rel="shortcut icon" href="/happy-robot-test/images/favicon.png" type="image/x-icon" />
 <link href="/happy-robot-test/css/font-awesome.min.css" rel="stylesheet">
 <link href="/happy-robot-test/css/nucleus.css" rel="stylesheet">
@@ -22,7 +22,7 @@
 
     
   </head>
-  <body data-url="/happy-robot-test/products/appspider/landing/">
+  <body data-url="/happy-robot-test/products/insight-agent/installing-the-insight-agent/">
     
       <header>
   <div class="logo">
@@ -62,7 +62,7 @@
             <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/happy-robot-test/products/appspider/landing/" class="dd-item active">
+      <li data-nav-id="/happy-robot-test/products/appspider/landing/" class="dd-item">
         <div>
           <a href="/happy-robot-test/products/appspider/landing/">
             Landing
@@ -111,7 +111,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/happy-robot-test/products/insight-agent/installing-the-insight-agent/" class="dd-item">
+      <li data-nav-id="/happy-robot-test/products/insight-agent/installing-the-insight-agent/" class="dd-item active">
         <div>
           <a href="/happy-robot-test/products/insight-agent/installing-the-insight-agent/">
             Installing the Insight Agent
@@ -196,14 +196,14 @@
    _Index</option>
     <option value="/happy-robot-test/products/" >
    Products</option> 
-      <option value="/happy-robot-test/products/appspider/landing/"  selected>- Landing</option>
+      <option value="/happy-robot-test/products/appspider/landing/" >- Landing</option>
       <option value="/happy-robot-test/products/nexpose/landing/" >- Landing</option>
       <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/deploying-insight-agent-to-azure/" >- Deploying Insight Agent to Azure</option>
       <option value="/happy-robot-test/products/insight-agent/frequently-asked-questions/" >- Frequently Asked Questions</option>
       <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-using-gpos/" >- Installing the Agent Using GPOs</option>
       <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-using-patch-management-software/" >- Installing the Agent Using Patch Management Software</option>
       <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-for-mcafee-epo-users/" >- Installing the Agent for McAfee ePO Users</option>
-      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/" >- Installing the Insight Agent</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/"  selected>- Installing the Insight Agent</option>
       <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent--deprecated-/" >- Installing the Insight Agent (deprecated)</option>
       <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent-in-silent-mode/" >- Installing the Insight Agent in Silent Mode</option>
       <option value="/happy-robot-test/products/insight-agent/system-requirements/" >- System Requirements</option>
@@ -235,19 +235,125 @@
       </div>
     
 
-    <h1>Landing</h1>
+    <h1>Installing the Insight Agent</h1>
     
     
     
-    <p>Stuff here too</p>
+    
+
+<p>To begin the installation process, download the Insight Agent and install it on the endpoint. Please note that you can only install one Insight Agent per machine.
+[block:callout]
+{
+  &ldquo;type&rdquo;: &ldquo;info&rdquo;,
+  &ldquo;body&rdquo;: &ldquo;If you are an existing Insight product customer and have already deployed an Insight Agent across your environment, there is nothing else you need to do. The Insight Agent works across all Insight products.&rdquo;,
+  &ldquo;title&rdquo;: &ldquo;Note&rdquo;
+}
+[/block]</p>
+
+<p>[block:api-header]
+{
+  &ldquo;title&rdquo;: &ldquo;Step1: Download the Insight Agent&rdquo;
+}
+[/block]
+1. From the <em>Agent Management</em> page, click the <strong>Download agent</strong> button.
+2. From the <em>Download Agent</em> page, download the Insight Agent for the appropriate platform. The Insight Agent is packaged in a ZIP file. The necessary license keys and certificates are provided in the downloaded file.
+[block:api-header]
+{
+  &ldquo;title&rdquo;: &ldquo;Step 2: Install the Insight Agent&rdquo;
+}
+[/block]
+You can install the Insight Agent on <a href="https://insightagent.help.rapid7.com/v1.0/docs/installation#section-windows">Windows</a>, <a href="https://insightagent.help.rapid7.com/v1.0/docs/installation#section-mac">Mac</a>, and <a href="https://insightagent.help.rapid7.com/v1.0/docs/installation#section-linux">Linux</a> systems. Follow the instructions for your operating system below.</p>
+
+<h2 id="windows">Windows</h2>
+
+<ol>
+<li>Copy the ZIP file to the target system and unzip it.  You will find the MSI installer as well as the following security files: client.key, client.crt, config.json, and cafile.pem.</li>
+<li>Make sure that all supporting files are unzipped to the same folder as the installer.</li>
+<li>Install the agent by executing the MSI installer.  The agent will be installed as a service, and the security files will also be automatically installed.  The default installation details are:
+
+<ul>
+<li><strong>Install Location</strong> - C:\Program Files (x86)\Rapid7\Insight Agent\ for 32-bit systems and C:\Program Files\Rapid7\Insight Agent\ for 64-bit systems</li>
+<li><strong>Service Name</strong> - Rapid7 Insight Agent</li>
+</ul></li>
+</ol>
+
+<h3 id="silent-installation">Silent Installation</h3>
+
+<p>Run the following for 32-bit Windows:</p>
+
+<p><code>msiexec /i agentInstaller-x86.msi /quiet /qn</code></p>
+
+<p>Run the following for 64-bit Windows:</p>
+
+<p><code>msiexec /i agentInstaller-x64.msi /quiet /qn</code></p>
+
+<h2 id="mac">Mac</h2>
+
+<ol>
+<li>Copy the ZIP file to the target system and unzip it.  You will find the PKG installer as well as the following security files: client.key, client.crt, config.json, and cafile.pem.</li>
+<li>Make sure that all supporting files are unzipped to the same folder as the installer.</li>
+<li>Install the agent by executing the PKG installer.  The agent will be installed as a service, and the security files will also be automatically installed.  The default installation details are:
+
+<ul>
+<li><strong>Install Location</strong> - /opt/rapid7/ir_agent</li>
+<li><strong>Service Name</strong> - com.rapid7.ir_agent</li>
+</ul></li>
+</ol>
+
+<h3 id="silent-installation-1">Silent Installation</h3>
+
+<p>Run the following in the folder of the Insight Agent that you downloaded:</p>
+
+<p><code>sudo installer -pkg endpoint_agent.pkg -target /</code></p>
+
+<h2 id="linux">Linux</h2>
+
+<ol>
+<li>Copy the ZIP file to the target system and unzip it.  You will find a script named <em>agent_control</em> as well as the following security files: client.key, client.crt, config.json, and cafile.pem.</li>
+<li>Make sure that all supporting files are unzipped to the same folder as the installer.</li>
+<li>Install the Insight Agent by executing the <em>agent_control</em> script.  Installation commands can be found in the README file packaged with the script itself. The Insight Agent is installed as a service, and the security files are automatically installed. The default installation details are:
+
+<ul>
+<li><strong>Install Location</strong> - /opt/rapid7/ir_agent</li>
+<li><strong>Service Name</strong> - ir_agent</li>
+</ul></li>
+</ol>
+
+<h3 id="silent-installation-2">Silent Installation</h3>
+
+<p>Linux Insight Agents always use silent installations. Refer to the README file in the agent package for install instructions.</p>
+
+<p>For more information on installation processes using Software Deployment Tools, see <a href="doc:installing-the-insight-agent-using-patch-management-software">Installing the Insight Agent Using Patch Management Software</a>, <a href="doc:installing-the-insight-agent-using-gpos">Installing the Insight Agent Using GPOs</a>, and <a href="doc:installing-the-insight-agent-for-mcafee-epo-users">Installing the Insight Agent for McAfee ePO Users</a>.
+[block:callout]
+{
+  &ldquo;type&rdquo;: &ldquo;info&rdquo;,
+  &ldquo;body&rdquo;: &ldquo;The Insight Agent will attempt to automatically update via Collector connections or via other agents before downloading the update from the Insight platform. Updates do not require a system restart for the new update to take effect.&rdquo;,
+  &ldquo;title&rdquo;: &ldquo;Note&rdquo;
+}
+[/block]</p>
+
+<p>[block:api-header]
+{
+  &ldquo;title&rdquo;: &ldquo;Step 3: Verify the Insight Agent Is Running&rdquo;
+}
+[/block]
+The InsightAgent automatically runs after it is installed. To verify that it is up and running, you can run
+<code>ps aux | grep ir_agent</code> on Mac and Linux systems or check the Task Manager for &ldquo;Rapid7&rsquo;s Insight Agent&rdquo; on Windows systems.
+[block:callout]
+{
+  &ldquo;type&rdquo;: &ldquo;info&rdquo;,
+  &ldquo;body&rdquo;: &ldquo;For Insight Agents on Mac and Linux systems, multiple “ir_agent” processes will appear in the process list. This means the Insight Agent is running different tasks; it is not an indicator of multiple agents.&ldquo;,
+  &ldquo;title&rdquo;: &ldquo;Note&rdquo;
+}
+[/block]</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/happy-robot-test/products/" title="Products"> <i class="fa fa-chevron-left"></i><label>Products</label></a>
-    <a class="nav nav-next" href="/happy-robot-test/products/nexpose/landing/" title="Landing" style="margin-right: 0px;"><label>Landing</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-for-mcafee-epo-users/" title="Installing the Agent for McAfee ePO Users"> <i class="fa fa-chevron-left"></i><label>Installing the Agent for McAfee ePO Users</label></a>
+    <a class="nav nav-next" href="/happy-robot-test/products/insight-agent/installing-the-insight-agent--deprecated-/" title="Installing the Insight Agent (deprecated)" style="margin-right: 0px;"><label>Installing the Insight Agent (deprecated)</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -261,13 +367,9 @@
     
 
   
-    <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 19/01/2018
-    </div>
-    
 
     <div class="github-link">
-      <a href="products/appspider/landing.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="products/insight-agent/Installing%20the%20Insight%20Agent.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

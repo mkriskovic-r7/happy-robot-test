@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.33" />
-<title>_Index :: Happy Robot</title>
+<title>Using the Agent with InsightIDR :: Happy Robot</title>
 <link rel="shortcut icon" href="/happy-robot-test/images/favicon.png" type="image/x-icon" />
 <link href="/happy-robot-test/css/font-awesome.min.css" rel="stylesheet">
 <link href="/happy-robot-test/css/nucleus.css" rel="stylesheet">
@@ -22,7 +22,7 @@
 
     
   </head>
-  <body data-url="/happy-robot-test/support/">
+  <body data-url="/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightidr/">
     
       <header>
   <div class="logo">
@@ -43,7 +43,7 @@
             <i class="fa fa-fw fa-home"></i>
           </a>
           </li>
-    <li data-nav-id="/happy-robot-test/support/" class="dd-item parent active
+    <li data-nav-id="/happy-robot-test/support/" class="dd-item
         ">
       <div>
       <a href="/happy-robot-test/support/">_Index</a>
@@ -55,10 +55,11 @@
       <a href="/happy-robot-test/community/">_Index</a>
       </div>
     </li>
-    <li data-nav-id="/happy-robot-test/products/" class="dd-item haschildren
+    <li data-nav-id="/happy-robot-test/products/" class="dd-item parent haschildren
         ">
       <div>
-      <a href="/happy-robot-test/products/">Products</a><i class="fa fa-angle-right fa-lg category-icon"></i>
+      <a href="/happy-robot-test/products/">Products</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
       <li data-nav-id="/happy-robot-test/products/appspider/landing/" class="dd-item">
@@ -152,7 +153,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightidr/" class="dd-item">
+      <li data-nav-id="/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightidr/" class="dd-item active">
         <div>
           <a href="/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightidr/">
             Using the Agent with InsightIDR
@@ -189,13 +190,29 @@
       <center>Navigation : 
         <select onchange="javascript:location.href = this.value;">
           
-    <option value="/happy-robot-test/support/"  selected>
-   _Index</option> 
-  
+    <option value="/happy-robot-test/support/" >
+   _Index</option>
     <option value="/happy-robot-test/community/" >
    _Index</option>
     <option value="/happy-robot-test/products/" >
-   Products</option>
+   Products</option> 
+      <option value="/happy-robot-test/products/appspider/landing/" >- Landing</option>
+      <option value="/happy-robot-test/products/nexpose/landing/" >- Landing</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/deploying-insight-agent-to-azure/" >- Deploying Insight Agent to Azure</option>
+      <option value="/happy-robot-test/products/insight-agent/frequently-asked-questions/" >- Frequently Asked Questions</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-using-gpos/" >- Installing the Agent Using GPOs</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-using-patch-management-software/" >- Installing the Agent Using Patch Management Software</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-for-mcafee-epo-users/" >- Installing the Agent for McAfee ePO Users</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/" >- Installing the Insight Agent</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent--deprecated-/" >- Installing the Insight Agent (deprecated)</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent-in-silent-mode/" >- Installing the Insight Agent in Silent Mode</option>
+      <option value="/happy-robot-test/products/insight-agent/system-requirements/" >- System Requirements</option>
+      <option value="/happy-robot-test/products/insight-agent/the-insight-agent/" >- The Insight Agent</option>
+      <option value="/happy-robot-test/products/insight-agent/the-insight-agent-communication-with-the-insight-platform/" >- The Insight Agent Communication with the Insight Platform</option>
+      <option value="/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightidr/"  selected>- Using the Agent with InsightIDR</option>
+      <option value="/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightops/" >- Using the Agent with InsightOps</option>
+      <option value="/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightvm/" >- Using the Agent with InsightVM</option>
+  
 
 
 
@@ -218,41 +235,40 @@
       </div>
     
 
-    <h1>_Index</h1>
+    <h1>Using the Agent with InsightIDR</h1>
     
     
     
+    <p>Insight Agents are vital tools to monitor assets in your organization, either on the network, or in the hands of remote employees. To help you understand how agents can help you, let’s take a look at some of the benefits of agents while using InsightIDR:
+* <strong>Real time monitoring:</strong> Real time monitoring in InsightIDR allows you to see detailed asset information, running process information, authentication information, account impersonation, and local machine detections. In addition to these features, and combined with Window File Access Auditing, the agent collects information about who is accessing what file and from where.
+* <strong>Opt-in Honey Credentials:</strong> Honey credentials can be used in your environment to bait hackers with an appealing credential. By enabling Honey Credentials, the agent will inject a fake username and password into the memory of your environment. For example, a popular hacking tool allows hackers to dump credentials from memory and use those credentials to move laterally through networks. If the hacker uses the honey credential found in memory, InsightIDR will alert users about the attempted use of the honey credential, including what machine the attempt originated from, and where the attacker attempted to authenticate to.
+* <strong>Advanced detection:</strong> The agent can lookup and detect vulnerabilities that users can’t find otherwise. For example, an agent can easily highlight protocol poisoning. Your environments could be at risk of being infiltrated with an attacker tool that sits in your network and listens for credentials being transmitted over certain multicast protocols. The agent will detect this type of attack, and alert you to it in near-real-time.
+[block:callout]
+{
+  &ldquo;type&rdquo;: &ldquo;info&rdquo;,
+  &ldquo;body&rdquo;: &ldquo;* <strong>WMI enabled</strong> – In order to collect certain information, the agent uses WMI. In some cases, if WMI is disabled, the agent will start, but some data collection will fail. If WMI has been turned off, but has a startup type of “Automatic” or “Manual”, the agent will attempt to start WMI.\n* <strong>Event Log enabled</strong> – In order to properly monitor windows assets, the Insight Agent requires the Event Log to be running. This will not prevent the agent from starting (except on Windows XP and Windows Server 2003). The event log needs to be started on Windows XP and Windows 2003. Windows 2003 SP1 does not need the event log to be running.\n* <strong>All currently available Insight Agent updates applied</strong> – The agent updates automatically, and information regarding the update is logged in the agent.log file. New data collection capabilities, and detections cannot be used until all agent updates are applied.&ldquo;,
+  &ldquo;title&rdquo;: &ldquo;Windows systems running the agent using InsightIDR must have:&rdquo;
+}
+[/block]
+##Data Collected by Insight Agents using InsightIDR
+The Insight Agent is continuously running and sending data back to the Insight Platform. The Insight Agent collects the following data for detection purposes: local authentication logs, local process hashes, and local security and event logs.</p>
 
+<p>Generally, collection includes the following types of data:
+* Process starts and stops
+* Security log event codes
+* System event codes
+* Protocol poisoning traps
+* File audit logs</p>
 
-
-<div class="extra-pagination inner">
-<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 0</span>
-	
-</nav>
-
-</div>
-
-
-
-<div style="margin-bottom:2rem"></div>
-
-<nav class="pagination" role="navigation">
-	
-	<span class="page-number">Page 1 of 0</span>
-	
-</nav>
-
-
+<p>If you have exposure analytics (EA) entitlement for Threat Exposure Management (TEM), the agent collects vulnerability assessment data when the agent is installed starting from when it last collected data. If the agent is offline when collection was due, it will collect as soon as the agent comes online.</p>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/happy-robot-test/" title="Happy Robot"> <i class="fa fa-chevron-left"></i><label>Happy Robot</label></a>
-    <a class="nav nav-next" href="/happy-robot-test/community/" title="_Index" style="margin-right: 0px;"><label>_Index</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/happy-robot-test/products/insight-agent/the-insight-agent-communication-with-the-insight-platform/" title="The Insight Agent Communication with the Insight Platform"> <i class="fa fa-chevron-left"></i><label>The Insight Agent Communication with the Insight Platform</label></a>
+    <a class="nav nav-next" href="/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightops/" title="Using the Agent with InsightOps" style="margin-right: 0px;"><label>Using the Agent with InsightOps</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -266,13 +282,9 @@
     
 
   
-    <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 19/01/2018
-    </div>
-    
 
     <div class="github-link">
-      <a href="support/_index.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="products/insight-agent/The%20Insight%20Agent/Using%20the%20Agent%20with%20InsightIDR.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

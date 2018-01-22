@@ -6,7 +6,7 @@
       <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 <meta name="generator" content="Hugo 0.33" />
-<title>Landing :: Happy Robot</title>
+<title>Deploying Insight Agent to Azure :: Happy Robot</title>
 <link rel="shortcut icon" href="/happy-robot-test/images/favicon.png" type="image/x-icon" />
 <link href="/happy-robot-test/css/font-awesome.min.css" rel="stylesheet">
 <link href="/happy-robot-test/css/nucleus.css" rel="stylesheet">
@@ -22,7 +22,7 @@
 
     
   </head>
-  <body data-url="/happy-robot-test/products/appspider/landing/">
+  <body data-url="/happy-robot-test/products/insight-agent/installing-the-insight-agent/deploying-insight-agent-to-azure/">
     
       <header>
   <div class="logo">
@@ -62,7 +62,7 @@
             <i class="fa fa-angle-down fa-lg category-icon"></i>
       </div>
         <ul>
-      <li data-nav-id="/happy-robot-test/products/appspider/landing/" class="dd-item active">
+      <li data-nav-id="/happy-robot-test/products/appspider/landing/" class="dd-item">
         <div>
           <a href="/happy-robot-test/products/appspider/landing/">
             Landing
@@ -76,7 +76,7 @@
           </a>
         </div>
     </li>
-      <li data-nav-id="/happy-robot-test/products/insight-agent/installing-the-insight-agent/deploying-insight-agent-to-azure/" class="dd-item">
+      <li data-nav-id="/happy-robot-test/products/insight-agent/installing-the-insight-agent/deploying-insight-agent-to-azure/" class="dd-item active">
         <div>
           <a href="/happy-robot-test/products/insight-agent/installing-the-insight-agent/deploying-insight-agent-to-azure/">
             Deploying Insight Agent to Azure
@@ -196,9 +196,9 @@
    _Index</option>
     <option value="/happy-robot-test/products/" >
    Products</option> 
-      <option value="/happy-robot-test/products/appspider/landing/"  selected>- Landing</option>
+      <option value="/happy-robot-test/products/appspider/landing/" >- Landing</option>
       <option value="/happy-robot-test/products/nexpose/landing/" >- Landing</option>
-      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/deploying-insight-agent-to-azure/" >- Deploying Insight Agent to Azure</option>
+      <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/deploying-insight-agent-to-azure/"  selected>- Deploying Insight Agent to Azure</option>
       <option value="/happy-robot-test/products/insight-agent/frequently-asked-questions/" >- Frequently Asked Questions</option>
       <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-using-gpos/" >- Installing the Agent Using GPOs</option>
       <option value="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-using-patch-management-software/" >- Installing the Agent Using Patch Management Software</option>
@@ -235,19 +235,140 @@
       </div>
     
 
-    <h1>Landing</h1>
+    <h1>Deploying Insight Agent to Azure</h1>
     
     
     
-    <p>Stuff here too</p>
+    
+
+<p>The Rapid7 Insight Agent connects your Azure virtual machines to solutions on the Rapid7 Insight platform.</p>
+
+<p>To get started, download the agent configuration/installation package from the agent download page in InsightVM.</p>
+
+<h1 id="installing-the-insight-agent-extension">Installing the Insight Agent extension</h1>
+
+<p>To add the Rapid7 Insight Agent extension to a virtual machine, follow these steps:</p>
+
+<ol>
+<li>Download the configuration zip from your Insight Platform solution.</li>
+<li>Apply the extension to the virtual machine through either the azure portal or command line.</li>
+</ol>
+
+<h2 id="using-azure-portal">Using Azure Portal</h2>
+
+<p>In the Azure portal, navigate to:</p>
+
+<ul>
+<li><strong>Virtual Machines</strong> &gt; [VMname] &gt; <strong>Extensions</strong> &gt; <strong>Add</strong> button &gt; <strong>Rapid7 Insight Agent</strong> extension</li>
+</ul>
+
+<h2 id="using-command-line">Using Command Line</h2>
+
+<p>[block:callout]
+{
+  &ldquo;type&rdquo;: &ldquo;info&rdquo;,
+  &ldquo;body&rdquo;: &ldquo;Get the latest available extension version with the Azure CLI.&rdquo;
+}
+[/block]
+1. Set up the <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest">Azure CLI</a> to <a href="https://docs.microsoft.com/en-us/cli/azure/vm/extension?view=azure-cli-latest">access the extension details</a>.
+2. Log in with <code>az login</code>.
+3. Browse Rapid7 extension versions with:</p>
+
+<pre><code>az vm extension image list --publisher &quot;Rapid7.InsightPlatform&quot;
+[{
+    &quot;name&quot;: &quot;InsightAgentLinux&quot;,
+    &quot;publisher&quot;: &quot;Rapid7.InsightPlatform&quot;,
+    &quot;version&quot;: &quot;2.0.0.2&quot;
+},
+{
+    &quot;name&quot;: &quot;InsightAgentWindows&quot;,
+    &quot;publisher&quot;: &quot;Rapid7.InsightPlatform&quot;,
+    &quot;version&quot;: &quot;2.0.0.2&quot;
+},
+...
+</code></pre>
+
+<h3 id="powershell">PowerShell</h3>
+
+<p>To add the Rapid7 Insight Agent extension to a virtual machine using PowerShell, first make sure you have the <a href="https://github.com/Azure/azure-powershell#installation">latest version</a> of PowerShell installed.
+[block:callout]
+{
+  &ldquo;type&rdquo;: &ldquo;warning&rdquo;,
+  &ldquo;title&rdquo;: &ldquo;NOTE&rdquo;,
+  &ldquo;body&rdquo;: &ldquo;Switching between classic and resource manager in the same PowerShell  window frequently results in an error:\n\n<code>Missing type map configuration or unsupported mapping</code>\n\nWhen using both types, it is recommended to use separate PowerShell windows.&rdquo;
+}
+[/block]
+1. Base64 encode the configuration zip file:</p>
+
+<pre><code>$filepath = C:\tmp\config.zip
+$binary = Get-Content -Path $filepath -Encoding Byte
+$base64 = [Convert]::ToBase64String($binary)
+</code></pre>
+
+<ol>
+<li>Apply extension:</li>
+</ol>
+
+<p><strong>Classic</strong>:
+Login: <code>Add-AzureAccount</code>
+List VMs: <code>Get-AzureVM</code></p>
+
+<pre><code>$params = &quot;{`&quot;configzip`&quot;: `&quot;$base64`&quot; }&quot;
+$vmobj = Get-AzureVM -ServiceName {your_vm_service_name} \
+-Name {your_vm_name}
+$vmobj | Set-AzureVMExtension -ExtensionName
+'InsightAgentWindows' \
+-Publisher 'Rapid7.InsightPlatform' \
+-Version 2.0 \
+-PrivateConfiguration $params
+$vmobj | Update-AzureVM   # This applies the extension
+$vmobj | Get-AzureVMExtension
+</code></pre>
+
+<p><strong>Resource Manager</strong>:
+Login: <code>Login-AzureRmAccount</code>
+List VMs: <code>Get-AzureRmVM</code></p>
+
+<pre><code>$params = @{&quot;configzip&quot; = &quot;$base64&quot;; };
+Set-AzureRmVMExtension -Publisher Rapid7.InsightPlatform \
+-ExtensionName InsightAgentWindows \
+-ExtensionType InsightAgentWindows \
+-Version 2.0 \
+-ProtectedSettings $params \
+-VMName {your_vm} \
+-Location {your_location} \
+-ResourceGroupName {your_resource_group}
+</code></pre>
+
+<h3 id="azure-2-0-cli">Azure 2.0 CLI</h3>
+
+<p>To add the Rapid7 Insight Agent extension to a <strong>resource manager</strong> virtual machine using the Azure CLI, first make sure you have the latest version of the <a href="https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest">Azure 2.x CLI</a> installed.</p>
+
+<pre><code>az login
+base64=$(base64 ~/config.zip)
+az vm extension set --protected-settings &quot;{\&quot;configzip\&quot;:\&quot;$base64\&quot;}&quot; --vm-name
+{your_windows_vm} --name InsightAgentWindows --publisher Rapid7.InsightPlatform
+--resource-group {vm-resource-group} --version 2.0
+</code></pre>
+
+<h3 id="azure-1-0-cli">Azure 1.0 CLI</h3>
+
+<p>To add the Rapid7 Insight Agent extension to a <strong>classic</strong> virtual machine using the Azure CLI, first make sure you have the latest version of the <a href="https://docs.microsoft.com/en-us/azure/cli-install-nodejs">Azure 1.x CLI</a> installed.</p>
+
+<pre><code>azure login
+azure config mode asm
+base64=$(base64 ~/config.zip)
+azure vm extension set -t &quot;{\&quot;configzip\&quot;:\&quot;$base64\&quot;}&quot; &quot;{your_windows_vm}&quot;
+InsightAgentWindows Rapid7.InsightPlatform 2.0
+</code></pre>
 
 
     
     
         <div class="chevrons">
     <div id="navigation">
-<a class="nav nav-prev" href="/happy-robot-test/products/" title="Products"> <i class="fa fa-chevron-left"></i><label>Products</label></a>
-    <a class="nav nav-next" href="/happy-robot-test/products/nexpose/landing/" title="Landing" style="margin-right: 0px;"><label>Landing</label><i class="fa fa-chevron-right"></i></a></div>
+<a class="nav nav-prev" href="/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-for-mcafee-epo-users/" title="Installing the Agent for McAfee ePO Users"> <i class="fa fa-chevron-left"></i><label>Installing the Agent for McAfee ePO Users</label></a>
+    <a class="nav nav-next" href="/happy-robot-test/products/insight-agent/installing-the-insight-agent--deprecated-/" title="Installing the Insight Agent (deprecated)" style="margin-right: 0px;"><label>Installing the Insight Agent (deprecated)</label><i class="fa fa-chevron-right"></i></a></div>
   </div>
 
   </section>
@@ -261,13 +382,9 @@
     
 
   
-    <div class="date">
-        <i class='fa fa-calendar'></i> Last update on 19/01/2018
-    </div>
-    
 
     <div class="github-link">
-      <a href="products/appspider/landing.md" target="blank"><i class="fa fa-code-fork"></i>
+      <a href="products/insight-agent/Installing%20the%20Insight%20Agent/Deploying%20Insight%20Agent%20to%20Azure.md" target="blank"><i class="fa fa-code-fork"></i>
         Improve this page</a>
     </div>
   </div>

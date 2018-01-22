@@ -1,0 +1,7 @@
+---
+title: "The Insight Agent"
+excerpt: ""
+---
+The Insight Agent collects system information from your assets and sends it back to the Rapid7 Insight Platform to be analyzed. Each time an agent provides a status update to the Rapid7 Insight Platform, any of the Insight Products you’ve licensed (InsightVM, InsightIDR, or InsightOps) will respond with any data collection tasks needed for inspection. They communicate with the Insight Platform directly or via the Rapid7 Collector by two-way SSL, secured by TLS v1.2 with a limited list of ciphers. You can deploy the Insight Agent to your supported platforms to monitor logon histories, running processes, and other types of forensic data. And since simply transmitting all data on an asset would be a massive waste of multiple resources, only the data relevant to each job is gathered and transmitted, with only the deltas since the last collection job typically being necessary. 
+
+The Insight Agent works across all Insight products and only needs to be installed once using the universal installers (MSI file for Windows, ZIP for Linux and Mac) and the certificate unique to your organization, to enable it throughout your environments. This ensures that you can distribute the Rapid7 Insight Agent to any number of laptops, desktops, and servers using group policy or similar tools.

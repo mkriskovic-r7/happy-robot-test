@@ -29,5 +29,141 @@
       <description>Stuff here</description>
     </item>
     
+    <item>
+      <title>Deploying Insight Agent to Azure</title>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/installing-the-insight-agent/deploying-insight-agent-to-azure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/installing-the-insight-agent/deploying-insight-agent-to-azure/</guid>
+      <description>The Rapid7 Insight Agent connects your Azure virtual machines to solutions on the Rapid7 Insight platform.
+To get started, download the agent configuration/installation package from the agent download page in InsightVM.
+Installing the Insight Agent extension To add the Rapid7 Insight Agent extension to a virtual machine, follow these steps:
+ Download the configuration zip from your Insight Platform solution. Apply the extension to the virtual machine through either the azure portal or command line.</description>
+    </item>
+    
+    <item>
+      <title>Frequently Asked Questions</title>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/frequently-asked-questions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/frequently-asked-questions/</guid>
+      <description>At this point, you should understand the basic concepts around Insight Agents and how to install them. Here are some answers to questions that you may still have at this point. [block:api-header] { &amp;ldquo;title&amp;rdquo;: &amp;ldquo;What do I need to do if I am an Insight IDR customer and I&amp;rsquo;ve already deployed an Insight Agent?&amp;rdquo; } [/block] If you are an existing InsightIDR customer and have already deployed an Insight Agent across your environment, there is nothing else you need to do.</description>
+    </item>
+    
+    <item>
+      <title>Installing the Agent Using GPOs</title>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-using-gpos/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-using-gpos/</guid>
+      <description>Download the continuous agent software and unzip it as described in the Installing the Insight Agent section. Copy the MSI (s) that you want to use in your environment, along with all the other files in the package, to the network file share that you want to use for this software package. Note that the extra files that are in the package need to be kept in the same folder as the MSI.</description>
+    </item>
+    
+    <item>
+      <title>Installing the Agent Using Patch Management Software</title>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-using-patch-management-software/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-using-patch-management-software/</guid>
+      <description>If you have multiple assets in your environment, it can be tedious and time consuming to deploy an agent on each one. To save time, the Insight agent can be pushed out to assets using standard patch management software. To do so, proceed through perform steps 1 and 2 in Installing the Insight Agent. The unzipped folder can then be pushed out to assets, and you can then run a silent install of the agent, using the normal Microsoft commands for an MSI file: msiexec /i agentinstaller-x86_x64.</description>
+    </item>
+    
+    <item>
+      <title>Installing the Agent for McAfee ePO Users</title>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-for-mcafee-epo-users/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/installing-the-insight-agent/installing-the-agent-for-mcafee-epo-users/</guid>
+      <description>Installing the Insight Agent allows McAfee ePO users to deploy and manage the Insight Agent via McAfee ePO software management.
+This process assumes that the McAfee ePolicy Orchestrator is already configured to monitor the Windows systems in your environment, and these target systems have the McAfee Agent installed.
+To begin, download the following: * the Rapid7 ePO extension (http://download2.rapid7.com/download/NeXpose-v4/epo-extension/Rapid7Nexpose.zip) * the Rapid7 Manager plugin (http://download2.rapid7.com/download/NeXpose-v4/epo-extension/R7AgentDeployment_0409.zip) * the InsightAgent installer from the “Download agent” page in your application.</description>
+    </item>
+    
+    <item>
+      <title>Installing the Insight Agent</title>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/installing-the-insight-agent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/installing-the-insight-agent/</guid>
+      <description>To begin the installation process, download the Insight Agent and install it on the endpoint. Please note that you can only install one Insight Agent per machine. [block:callout] { &amp;ldquo;type&amp;rdquo;: &amp;ldquo;info&amp;rdquo;, &amp;ldquo;body&amp;rdquo;: &amp;ldquo;If you are an existing Insight product customer and have already deployed an Insight Agent across your environment, there is nothing else you need to do. The Insight Agent works across all Insight products.&amp;rdquo;, &amp;ldquo;title&amp;rdquo;: &amp;ldquo;Note&amp;rdquo; } [/block]</description>
+    </item>
+    
+    <item>
+      <title>Installing the Insight Agent (deprecated)</title>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/installing-the-insight-agent--deprecated-/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/installing-the-insight-agent--deprecated-/</guid>
+      <description>To begin the installation process, download the Insight Agent and install it on the endpoint. Just remember that you can only install one Insight Agent per machine. [block:callout] { &amp;ldquo;type&amp;rdquo;: &amp;ldquo;info&amp;rdquo;, &amp;ldquo;body&amp;rdquo;: &amp;ldquo;If you are an existing Insight product customer and already deployed an Insight Agent across your environment, there is nothing else you need to do. The Insight Agent works across all Insight products.&amp;rdquo; } [/block] 1. From the Agent Management page, click the Download agent button.</description>
+    </item>
+    
+    <item>
+      <title>Installing the Insight Agent in Silent Mode</title>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/installing-the-insight-agent-in-silent-mode/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/installing-the-insight-agent-in-silent-mode/</guid>
+      <description>Silent installation provides a way for you to distribute the InsightAgent in unattended mode. To perform a silent installation, you must have administrator privileges.
+Windows Run the following for 32-bit Windows:
+msiexec /i agentInstaller-x86.msi /quiet /qn  Run the following for 64-bit Windows:
+msiexec /i agentInstaller-x64.msi /quiet /qn  Mac Run the following in the folder of the Insight Agent that you downloaded:
+sudo installer -pkg endpoint_agent.pkg -target /  Linux Linux Insight Agents always use silent installations.</description>
+    </item>
+    
+    <item>
+      <title>System Requirements</title>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/system-requirements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/system-requirements/</guid>
+      <description>Currently, Insight Agents are officially supported on the following systems: * Windows – All versions Windows XP onwards. [block:callout] { &amp;ldquo;type&amp;rdquo;: &amp;ldquo;info&amp;rdquo;, &amp;ldquo;body&amp;rdquo;: &amp;ldquo;Windows XP (including SP2 and SP3) and Windows 2003 (including SP1) requires WMI service to be set to Automatic or Manual.&amp;rdquo; } [/block]
+[block:callout] { &amp;ldquo;type&amp;rdquo;: &amp;ldquo;info&amp;rdquo;, &amp;ldquo;body&amp;rdquo;: &amp;ldquo;Windows systems running the agent must have all currently available Insight Agent updates applied. The agent updates automatically, and information regarding the update is logged in the agent.</description>
+    </item>
+    
+    <item>
+      <title>The Insight Agent</title>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/the-insight-agent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/the-insight-agent/</guid>
+      <description>The Insight Agent collects system information from your assets and sends it back to the Rapid7 Insight Platform to be analyzed. Each time an agent provides a status update to the Rapid7 Insight Platform, any of the Insight Products you’ve licensed (InsightVM, InsightIDR, or InsightOps) will respond with any data collection tasks needed for inspection. They communicate with the Insight Platform directly or via the Rapid7 Collector by two-way SSL, secured by TLS v1.</description>
+    </item>
+    
+    <item>
+      <title>The Insight Agent Communication with the Insight Platform</title>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/the-insight-agent-communication-with-the-insight-platform/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/the-insight-agent-communication-with-the-insight-platform/</guid>
+      <description>Insight agents will always try to communicate with the Insight platform through a Collector. Agents automatically discover all Collectors in a particular environment and select the Collector that is most efficient. If no Collectors are available, or the path through a Collector is deemed inefficient, then the agent will contact the Insight platform directly.</description>
+    </item>
+    
+    <item>
+      <title>Using the Agent with InsightIDR</title>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightidr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightidr/</guid>
+      <description>Insight Agents are vital tools to monitor assets in your organization, either on the network, or in the hands of remote employees. To help you understand how agents can help you, let’s take a look at some of the benefits of agents while using InsightIDR: * Real time monitoring: Real time monitoring in InsightIDR allows you to see detailed asset information, running process information, authentication information, account impersonation, and local machine detections.</description>
+    </item>
+    
+    <item>
+      <title>Using the Agent with InsightOps</title>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightops/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightops/</guid>
+      <description>Insight Agents are vital tools to monitor assets in your organization, either on the network, or in the hands of remote employees. To help you understand how agents can help you, let’s take a look at some of the benefits of agents while using InsightOps: * Log following: The agent can send the contents of logs on the host machine to InsightOps using the Endpoint Interrogator, allowing you to monitor the current health and status of your devices.</description>
+    </item>
+    
+    <item>
+      <title>Using the Agent with InsightVM</title>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightvm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/insight-agent/the-insight-agent/using-the-agent-with-insightvm/</guid>
+      <description>Insight Agents are vital tools to monitor assets in your organization, either on the network, or in the hands of remote employees. To help you understand how agents can help you, let’s take a look at some of the benefits of agents while using InsightVM: * You can track remote assets: Some assets owned by your organization may be off the organization’s network for long periods of time. For example, a laptop used by an employee who works remotely may not be on the company network.</description>
+    </item>
+    
   </channel>
 </rss>
