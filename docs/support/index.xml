@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>_Index on Happy Robot</title>
-    <link>http://help.rapid7.com/support/</link>
+    <link>https://mkriskovic-r7.github.io/happy-robot-test/support/</link>
     <description>Recent content in _Index on Happy Robot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 19 Jan 2018 18:14:15 -0800</lastBuildDate>
     
-	<atom:link href="http://help.rapid7.com/support/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mkriskovic-r7.github.io/happy-robot-test/support/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Products on Happy Robot</title>
-    <link>http://help.rapid7.com/products/</link>
+    <link>https://mkriskovic-r7.github.io/happy-robot-test/products/</link>
     <description>Recent content in Products on Happy Robot</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 19 Jan 2018 16:43:56 -0800</lastBuildDate>
     
-	<atom:link href="http://help.rapid7.com/products/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mkriskovic-r7.github.io/happy-robot-test/products/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Landing</title>
-      <link>http://help.rapid7.com/products/appspider/landing/</link>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/appspider/landing/</link>
       <pubDate>Fri, 19 Jan 2018 16:44:07 -0800</pubDate>
       
-      <guid>http://help.rapid7.com/products/appspider/landing/</guid>
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/appspider/landing/</guid>
       <description>Stuff here too</description>
     </item>
     
     <item>
       <title>Landing</title>
-      <link>http://help.rapid7.com/products/nexpose/landing/</link>
+      <link>https://mkriskovic-r7.github.io/happy-robot-test/products/nexpose/landing/</link>
       <pubDate>Fri, 19 Jan 2018 16:43:56 -0800</pubDate>
       
-      <guid>http://help.rapid7.com/products/nexpose/landing/</guid>
+      <guid>https://mkriskovic-r7.github.io/happy-robot-test/products/nexpose/landing/</guid>
       <description>Stuff here</description>
     </item>
     

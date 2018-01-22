@@ -1,4 +1,4 @@
-baseURL = "http://help.rapid7.com/"
+baseURL = "https://mkriskovic-r7.github.io/happy-robot-test/"
 languageCode = "en-us"
 title = "Happy Robot"
 theme = "docdock"
