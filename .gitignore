@@ -1,0 +1,39 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+
+# Emacs temporary files
+*~
+\#*
+*\#
+
+# Bower
+public/vendor
+
+# Node
+node_modules
+npm-debug.log
+
+# Dependencies
+bower_components
+
+# dist/
+dist/
+dist/*.*
+
+# Sass
+.sass-cache
+
+# Webstorm/intellij files
+.idea
+
+# Other
+nohup.out
+.tmp
+app/styles/main.*.*
+app/styles/style.css
+
+# IDE settings
+.idea
+_notes/*.*
+*/_notes/*.*

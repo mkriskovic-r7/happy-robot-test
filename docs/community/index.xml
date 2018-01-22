@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>_Index on Happy Robot</title>
+    <link>http://help.rapid7.com/community/</link>
+    <description>Recent content in _Index on Happy Robot</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 19 Jan 2018 18:14:07 -0800</lastBuildDate>
+    
+	<atom:link href="http://help.rapid7.com/community/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

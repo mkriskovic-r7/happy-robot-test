@@ -1,0 +1,24 @@
+baseURL = "http://help.rapid7.com/"
+languageCode = "en-us"
+title = "Happy Robot"
+theme = "docdock"
+publishDir = "docs"
+
+[menu]
+    [[menu.main]]
+    identifier = "products"
+    name       = "Products"
+    url        = "/products/"
+    weight     = 0
+
+    [[menu.main]]
+    identifier = "community"
+    name       = "Community"
+    url        = "/community/"
+    weight     = 2
+
+    [[menu.main]]
+    identifier = "support"
+    name       = "Support"
+    url        = "/support/"
+    weight     = 2
